@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Places</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tulpen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* .container {
+    width: 90%;
+    text-align: center;
+}
+.contain{
+    display: flex;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-box {
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.image-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.image-box p {
+    margin-top: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.image-box:hover {
+    transform: scale(1.1);
+} */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eaeaeab9;
+        }
+
+        .container {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .contain {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .contain h2 {
+            font-family: "Jost", serif;
+            font-size: 50px;
+            text-shadow: -3px 3px 3px rgba(66, 68, 90, 1);
+        }
+
+        .contain span {
+            font-family: "Tulpen One", serif;
+            font-size: 50px;
+            text-shadow: none;
+        }
+
+        input {
+            width: 50%;
+            height: 50px;
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            font-size: 16px;
+            text-indent: 8px;
+            outline: none;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        }
+
+        .image-box img {
+            width: 360px;
+            height: 250px;
+            object-fit: cover;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+
+        .image-box p {
+            font-family: "Ubuntu", serif;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px 35px;
+            padding-bottom: 40px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .image-box p {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contain">
+            <h2 style="display: flex; align-items: center;"><span>Famous</span>PLACES</h2>
+            <input type="text" id="searchBox" placeholder="Search...">
+        </div>
+        <div class="gallery" id="gallery">
+            <div class="image-box" data-name="Istanbul, Turkey">
+                <img src="image/istanbul3.jpg" alt="Istanbul, Turkey">
+                <p>Istanbul, Turkey</p>
+            </div>
+            <div class="image-box" data-name="Jerusalem, Palestine">
+                <img src="image/palestine.jpg" alt="Jerusalem, Palestine">
+                <p>Jerusalem, Palestine</p>
+            </div>
+            <div class="image-box" data-name="Makkah, Saudi Arabia">
+                <img src="image/mecca.jpg" alt="Makkah, Saudi Arabia">
+                <p>Makkah, Saudi Arabia</p>
+            </div>
+            <div class="image-box" data-name="Paris, France">
+                <img src="image/paris.jpg" alt="Paris, France">
+                <p>Paris, France</p>
+            </div>
+            <div class="image-box" data-name="Rome, Italy">
+                <img src="image/rome.jpg" alt="Rome, Italy">
+                <p>Rome, Italy</p>
+            </div>
+            <div class="image-box" data-name="Kuala Lumpur, Malaysia">
+                <img src="image/malaysia.jpg" alt="Kuala Lumpur, Malaysia">
+                <p>Kuala Lumpur, Malaysia</p>
+            </div>
+            <div class="image-box" data-name="Darjeeling, India">
+                <img src="image/darjeeling.jpg" alt="Darjeeling, India">
+                <p>Darjeeling, India</p>
+            </div>
+            <div class="image-box" data-name="Swat, Pakistan">
+                <img src="image/swat.jpg" alt="Swat, Pakistan">
+                <p>Swat, Pakistan</p>
+            </div>
+            <div class="image-box" data-name="Toronto, Canada">
+                <img src="image/canada.jpg" alt="Toronto, Canada">
+                <p>Toronto, Canada</p>
+            </div>
+            <div class="image-box" data-name="London, England">
+                <img src="image/london.jpg" alt="London, England">
+                <p>London, England</p>
+            </div>
+            <div class="image-box" data-name="Barcelona, Spain">
+                <img src="image/barcelona.jpg" alt="Barcelona, Spain">
+                <p>Barcelona, Spain</p>
+            </div>
+            <div class="image-box" data-name="Abu Dhabi, Dubai">
+                <img src="image/dubai.jpg" alt="Abu Dhabi, Dubai">
+                <p>Abu Dhabi, Dubai</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("searchBox").addEventListener("input", function () {
+            let searchQuery = this.value.toLowerCase();
+            let images = document.querySelectorAll(".image-box");
+
+            images.forEach(image => {
+                let name = image.getAttribute("data-name").toLowerCase();
+
+                if (name.includes(searchQuery)) {
+                    image.style.display = "block";
+                } else {
+                    image.style.display = "none";
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
