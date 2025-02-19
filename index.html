@@ -210,13 +210,20 @@ input {
     <script>
         document.getElementById("searchBox").addEventListener("input", function () {
             let searchQuery = this.value.toLowerCase();
+            console.log("Search", searchQuery);
+
             let images = document.querySelectorAll(".image-box");
             console.log("images",images)
+
             images.forEach(image => {
                 let name = image.getAttribute("data-name").toLowerCase();
+                console.log("Image Name:", name); 
+
                 if (name.includes(searchQuery)) {
+                    console.log(`Match Found:"${name}"`);
                     image.style.display = "block";
                 } else {
+                    console.log(`No Match:"${name}"`);
                     image.style.display = "none";
                 }
             });
