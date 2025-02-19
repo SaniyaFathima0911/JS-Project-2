@@ -211,10 +211,9 @@ input {
         document.getElementById("searchBox").addEventListener("input", function () {
             let searchQuery = this.value.toLowerCase();
             let images = document.querySelectorAll(".image-box");
-
+            console.log("images",images)
             images.forEach(image => {
                 let name = image.getAttribute("data-name").toLowerCase();
-
                 if (name.includes(searchQuery)) {
                     image.style.display = "block";
                 } else {
